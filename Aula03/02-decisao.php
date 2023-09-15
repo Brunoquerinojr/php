@@ -71,7 +71,17 @@
     </ul>
 
     <!-- Criar aqui seu programa PHP -->
+    <?php
+    $a = 5;
+
+    if ($a > 1) {
+        echo 'True $a é maior que 1. <br>';
+    }
     
+    if ($a > 1) echo 'True $a é maior que 1.';
+    
+   
+    ?>
     
     <hr>
     
@@ -121,7 +131,23 @@
     <hr>
 
     <!-- Criar aqui seu programa PHP -->
+        <?php
+            //variavel
+            $produto = 'Ultrabook ASUS';
+            $estoque_atual = 0;
+            $estoque_minimo = 14;
 
+            if ($estoque_atual < $estoque_minimo) {
+                echo "<h3>$produto</h3>";
+                echo "<span class=repor>É necessário repor </span>";
+                echo "<br>";
+                echo "<mark>URGENTE</mark>";
+            } else {
+                echo "<h3>$produto</h3>";
+                echo "<span class=ok>O estoque está ok </span>";
+            }
+          
+        ?>
     
     <hr>
 
@@ -168,6 +194,34 @@
     <hr>
     
     <!-- Criar aqui seu programa PHP -->
+    <?php
+   
+    // Esfiha
+    // Pastel
+    // Pizza
+    // Opção inválida
+
+
+    
+
+    // Criar uma variável para receber uma das opções da lista. Iniciar com uma delas.
+    $opcao = "esfiha";
+
+    // Montar uma estrutura encadeada que verifique qual a opção escolhida
+    if ($opcao == "1") {
+        // Exibir o nome do produto pedido conforme a opção escolhida na variável.
+        echo "Você pediu uma esfiha.";
+    } elseif ($opcao == "2") {
+        // Exibir o nome do produto pedido conforme a opção escolhida na variável.
+        echo "Você pediu um pastel.";
+    } elseif ($opcao == "3") {
+        // Exibir o nome do produto pedido conforme a opção escolhida na variável.
+        echo "Você pediu uma pizza.";
+    } else {
+        // Exibir o nome do produto pedido conforme a opção escolhida na variável.
+        echo "Opção inválida.";
+    }
+    ?>
     
     <hr>
 
@@ -202,7 +256,18 @@
     <hr>
 
     <!-- Criar aqui seu programa PHP -->
-    
+    <?php
+   
+   
+   $opcao = "4";
+
+    switch ($opcao) {
+        case 1:  echo "Você pediu uma esfiha."; break;
+        case 2:  echo "Você pediu um pastel."; break;
+        case 3:  echo "Você pediu uma pizza."; break;
+        case 4:  echo "Opção inválida"; break;
+    }
+    ?>
     
     <!-- Rodapé -->
     <div class="container">
