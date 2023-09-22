@@ -15,7 +15,15 @@
 
 
     <!-- 1ª Digitação (Aqui) -->
-
+    
+    
+    <?php
+    $i = 1;
+    while ($i <= 5) {
+        echo "$i";
+        $i ++;  
+    }
+    ?>
 
 <hr>
 <!-- _______________________________________________________________________________ -->
@@ -24,8 +32,20 @@
 
 
 <!-- 2ª Digitação (Aqui) -->
+        
+        
+        <?php
+            $j = 1;
+            do {
+        ?>
+            <div><h3>Sesi-Senai 1DE</h3></div>
+        <?php
+            $j++;        
 
 
+            } while ($j <=4);
+
+        ?>
 <hr>
 <!-- _______________________________________________________________________________ -->
     <h2 class="destaque">For</h2>
@@ -37,8 +57,14 @@
     //Controle; Condição; Atualização
 
     //  3ª Digitação (Aqui)
+    
+    for( $i = 1; $i <=10; $i++){
+        // O ponto concatena
+        echo $i." | ";
 
- ?>
+    }
+?>
+ 
  <!-- _______________________________________________________________________________ -->
 
  <!-- Exercício
@@ -53,7 +79,20 @@
     $meses = array("Janeiro", "Fevereiro", "Março", "Abril","Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro","Novembro", "Dezembro");
 ?>
     <ol>
+    <?php
+                    // Linha abaixo permite melhorar a performace para grandes tabelas
+                    $quantidade = count($meses);
 
+                    for($k = 0; $k < $quantidade; $k++) {
+                    // for($k = 0; $k <= 11; $k++) {
+                ?>
+            
+                        <li><?=$meses[$k]?></li>
+            
+
+                <?php
+                    }
+                ?>
 
         <!-- 4ª Digitação (Aqui) -->
 
@@ -64,28 +103,45 @@
 <hr>
     <h2 class="destaque">foreach (para cada)</h2>
 
-<ol>
-
+            <ol>
+                <?php
+                    foreach($meses as $mes) {
+                ?>
+                    <li><?=$mes?></li>
+                <?php           
+                   }
+                        
+                ?>
 
     <!-- 5ª Digitação (Aqui) -->
     
 
-</ol>
+            </ol>
 <!-- _______________________________________________________________________________ -->
 <hr>
     <h2 class="destaque">Array associativo</h2>
-<?php
-    $clubes = [
-        "Corinthians" => "Timão",
-        "Palmeiras" => "Porco",
-        "São Paulo" => "Tricolor",
-        "Santos" => "Peixe",
+    <?php
+        $clubes = [
+            "Corinthians" => "Timão",
+            "Palmeiras" => "Porco",
+            "São Paulo" => "Tricolor",
+            "Santos" => "Peixe",
 
-    ];
+        ];
 
-    //  6ª Digitação (Aqui) 
+        foreach($clubes as $clube => $apelido) {
+            ?>
+            <p>
+                O <?=$clube?> é conhecido como: <?=$apelido?>
+            </p>
+            <?php
+            }
 
-?>
+    ?>
+
+      <!-- 6ª Digitação (Aqui)  -->
+
+
 <!-- _______________________________________________________________________________ -->
 <hr>
     <h2 class="destaque">Matriz (Associativa)</h2>
@@ -114,7 +170,9 @@ $alunos = [
 ?>
 
   <!-- 7ª Digitação (Aqui) -->
-
+  <p> Nome: <?=$aluno['nome']?> </p>
+    <p> Idade: <?=$aluno['idade']?> </p>
+    <hr>
 <?php
     }
 ?>

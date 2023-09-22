@@ -16,7 +16,14 @@
 
 
 <!-- 1ª Digitação (Aqui) -->
-
+    <?php
+    $a = 70;
+    if ($a > 1) {
+        echo 'True $a é maior que 1. <br>';
+    }
+    
+    
+    ?>
 
 <hr>
 <!-- ___________________________________________________________________ -->
@@ -32,7 +39,18 @@
 
 
 <!-- 2ª Digitação (Aqui) -->
+<?php
+ if ($qtdEmEstoque < $qtdCritica) {
+    echo "<h3>$produto</h3>";
+    echo "<span class=repor>É necessário repor </span>";
+    echo "<br>";
+    echo "<mark>URGENTE</mark>";
+} else {
+    echo "<h3>$produto</h3>";
+    echo "<span class=ok>O estoque está ok </span>";
+}
 
+?>
 
 <hr>
 <!-- ___________________________________________________________________ -->
@@ -69,7 +87,15 @@
 
 
     //  3ª Digitação (Aqui) 
-
+    if($opcao ===1) {
+        $opcaoEscolhida = "Pastel";
+    } elseif ($opcao ===2) {
+        $opcaoEscolhida = "Pizza";
+    } elseif ($opcao ===3) {
+        $opcaoEscolhida = "Esfiha";
+    } else {
+        $opcaoEscolhida = "Opção inválida";
+    }
 
 ?>
     <p><?=$opcaoEscolhida?></p>
@@ -79,6 +105,17 @@
 <h2 class="destaque">Switch/Case</h2>
 
 <!-- 4ª Digitação (Aqui) -->
-    
+<?php
+   
+   
+   $opcao = "4";
+
+    switch ($opcao) {
+        case 1:  echo "Você pediu uma esfiha."; break;
+        case 2:  echo "Você pediu um pastel."; break;
+        case 3:  echo "Você pediu uma pizza."; break;
+        case 4:  echo "Opção inválida"; break;
+    }
+    ?>
 </body>
 </html>
