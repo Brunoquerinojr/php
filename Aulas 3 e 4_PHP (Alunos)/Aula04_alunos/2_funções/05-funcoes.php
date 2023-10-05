@@ -16,13 +16,12 @@
 
         <!-- Função Dados do autor -->
         <?php
-
-        function dadosAutor() {
-            echo "<div>";
-            echo "<p>Mattia Binotto</p>";
-            echo "<p>Mattia.Binotto@ferrari.f1</p>";
-            echo "</div>";
-        }
+            function dadosAutor(){
+                echo "<div>";
+                echo "<p>Mattia Binotto</p>";
+                echo "<p>mattia.binotto@ferrari.fi</p>";
+                echo "<div>";
+            }
         ?>
 
         <section>
@@ -46,19 +45,17 @@
 
         ?>
     
-            <!-- 2ª Digitação (Aqui) -->
-            <p>Estamos no curso de <?=dadosCurso()?></p>
-            <p><?=dadosCurso()?> é ministrado do SENAI</p>
-
+        <p>Estampos no curso de <?=dadosCurso()?></p>
+        <p><?=dadosCurso()?> é ministrado no SENAI.</p>
         <hr>
         
         <h2 class="destaque">Função com parâmetros (ou argumentos)</h2>
     
         <!-- Função Soma -->
         <?php
-
-            function soma ($valor, $valor2, $valor3=0) {
-                $total = $valor + $valor2 + $valor3;
+            // O exemplo abaixo permite que o 3º valor não seja declarado
+            function soma ($valor1, $valor2, $valor3=0){
+                $total = $valor1 + $valor2 + $valor3;
                 return $total;
             }
 
@@ -111,9 +108,8 @@
 
         <?php
 
-            // 4ª Digitação (Aqui)
             $formataPreco = function($valor) {
-            return "R$".number_format ($valor,2,"," , ".");
+                return "R$".number_format($valor,2,"," , ".");
             }
         ?>
 
@@ -133,11 +129,12 @@
             // int: valor numérico inteiro
             // string: caracteres
 
+
             function calculaMedia (float $n1, float $n2): float {
                 $media = ($n1 + $n2)/2;
                 return $media;
             }
-                        
+            
 
         ?>
 
